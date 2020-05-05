@@ -1,0 +1,24 @@
+<form *ngIf="showMePartially" style="float: right" >
+  <div class="log">
+
+    <div class="container">
+      <h1 >Sing in:</h1>
+      <div>
+        <input type="text" name="username" placeholder="Login " required [(ngModel)]="user.username">
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="Password " required [(ngModel)]="user.password">
+      </div>
+
+      <button (click)="onLogin()" type="submit" id="logbtn" class="loginbtn">Sign in</button>
+      <div>
+        <h1 style="float: none">Sign in with</h1>
+
+        <h1 style="float: none; margin-top:5px; " >New customer?<button class="signup" (click)="showRegistration()"> Sign up</button></h1>
+        <app-registration [showMe]="showReg"></app-registration>
+      </div>
+
+    </div>
+  </div>
+
+</form>

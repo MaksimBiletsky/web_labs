@@ -1,0 +1,54 @@
+
+<header>
+
+  <div class="logo">
+    <a href=""><img
+            width="60"
+            alt="Logo"
+            src="../../../../../assets/img_header/lg.png" height="60" width="45"
+    /></a>
+  </div>
+
+  <div class="toolbar" >
+    <div class="list">
+      <ul >
+        <li><a routerLink="/shopping">Catalog</a></li>
+        <li><a routerLink="/about-us">About us</a></li>
+        <li><a routerLink="/faq">FAQ</a></li>
+      </ul>
+
+    </div>
+
+    <div class="icon" *ngIf="!loginVar">
+     <img (click)="viewCart()" class="second" src="../../../../../assets/img_header/cart.png" height="28" />
+
+      <div style=" position: absolute; right: 255px; top: 39px;">
+        <app-cart [showCart]="cartVar" ></app-cart></div>
+      </div>
+    <div class="mobile_menu"><button type="button">Menu</button></div>
+    <div class="mobile_ul">
+      <li><a routerLink="/shopping">Catalog</a></li>
+      <li><a routerLink="/about-us">About us</a></li>
+      <li><a routerLink="/faq">FAQ</a></li>
+    </div>
+
+    <div class="login" *ngIf="loginVar">
+      <div (click)="toggleChild()"   >
+        <button type="button"  >Log in</button>
+      </div>
+
+      <div class="log" style=" position: absolute; right: 320px; top: 65px;">
+        <app-login [showMePartially]="showVar" style="float: right" ></app-login>
+      </div>
+    </div>
+    <div class="login" *ngIf="!loginVar">
+      <div (click)="onLogOut()"   >
+        <button type="button"  >Log out</button>
+      </div>
+    </div>
+
+    </div>
+
+</header>
+
+

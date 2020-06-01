@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,700,700i&display=swap');
+
+*{
+  margin: 0;
+
+}
+/* Customize the label (the container) */
+.container {
+  width: 200px;
+  height: 28px;
+  left: 147px;
+  top: 30px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #071222;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 18, 34, 0.6);
+  box-sizing: border-box;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #FFFFFF;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "X";
+  color: #071222;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  border: solid white;
+  border-width: 3px 0px 0px 8.5px;
+  //-webkit-transform: rotate(45deg);
+  //-ms-transform: rotate(45deg);
+  //transform: rotate(45deg);
+}
+//
+.line {
+  width: 350px;
+  height: 40px;
+  left: 147px;
+
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: rgba(7, 18, 34, 0.3);
+}
+
+.main_content{
+  display: flex;
+  margin-top: -17px;
+
+}
+.under-header-panel{
+  display: flex;
+}
+
+.all_filters{
+  margin-top: 80px;
+  margin-left: 60px;
+  margin-bottom: 80px;
+}
+
+.list{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.search{
+  margin-bottom: 20px;
+}
+@media (max-width: 949px) {
+  .all_filters{
+    display: none;
+  }
+}

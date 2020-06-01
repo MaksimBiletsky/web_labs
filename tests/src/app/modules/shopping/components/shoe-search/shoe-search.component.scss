@@ -1,0 +1,52 @@
+*{
+  font-family: Montserrat;
+}
+@media (min-width: 950px) {
+
+
+  input[type="text"] {
+
+    width: 450px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(7, 18, 34, 0.3);
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+  button {
+    margin-left: -50px;
+    border-radius: 10px;
+    border: 1px solid rgba(7, 18, 34, 0.3);
+    height: 30px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  i::before {
+    content: '\e806';
+  }
+}
+
+@media (max-width: 949px) {
+
+
+  input[type="text"] {
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(7, 18, 34, 0.3);
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+  button {
+    margin-left: -50px;
+    border-radius: 10px;
+    border: 1px solid rgba(7, 18, 34, 0.3);
+    height: 30px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  i::before {
+    content: '\e806';
+  }
+}
